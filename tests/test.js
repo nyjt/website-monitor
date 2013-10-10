@@ -1,6 +1,7 @@
-var test = require('./index').test
+var test = require('../index').test
 var http = require('http');
 var assert = require('assert');
+var exec = require('child_process').exec;
 
 var success_server = http.createServer(function(req, res) {
   res.writeHead(200, { 'Content-type': 'text/html' });
@@ -22,7 +23,10 @@ function success_status_test() {
     assert.equal(status_result.message, 'SUCCESS', 'status message should be "SUCCESS"');
     assert.equal(status_result.url, url, "url property should be " + url + ", but it is " + status_result.url);
     assert.equal(status_result.code, 200, 'http status code should be 200');
-    success_server.close();   
+    exec('node tests/success_log_test.js', function(error, stdout, stderr) {
+      assert.equal(stdout, "SUCCESS 200 http://localhost:40444/\n");
+      success_server.close();   
+    });
   });
 }
 
@@ -34,7 +38,10 @@ function error_status_test() {
     assert.equal(status_result.message, 'ERROR', 'status message should be "ERROR"');
     assert.equal(status_result.url, url, "url property should be " + url + ", but it is " + status_result.url);
     assert.equal(status_result.code, 400, 'http status code should be 400');
-    error_server.close();
+    exec('node tests/error_log_test.js', function(error, stdout, stderr) {
+      assert.equal(stdout, "ERROR   400 http://localhost:50555/\n");
+      error_server.close();
+    });  
   });
 }
 

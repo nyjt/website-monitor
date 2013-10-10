@@ -1,6 +1,6 @@
 {
   "name": "website-monitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Jozsef Nyitrai",
     "email": "nyitrai.jozsef@gmail.com>"
@@ -28,8 +28,8 @@
   "engines": {
     "node": ">=0.8.0"
   },
-  "scipts": {
-    "test": "node test.js"
+  "scripts": {
+    "test": "node tests/test.js"
   } 
 }
 

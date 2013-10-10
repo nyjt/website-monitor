@@ -4,7 +4,7 @@ function status_test(url, callback) {
   request(url, function(error, response, body) {
     var message = 'SUCCESS';
 
-    if (response.statusCode >= 400 || error) {
+    if (error || response.statusCode >= 400) {
       message = 'ERROR';
     }
 
@@ -28,12 +28,14 @@ exports.log = function(url, callback) {
     if (options.error_message) { 
       console.log(url + ' request error: ' + error);
     }
-    var final_message = message;
-    if (message == 'ERROR') {
+    var final_message = options.message;
+    if (options.message == 'ERROR') {
       final_message += '  ';
     }
     console.log(final_message + ' ' + options.code + ' ' + url);
-    callback(options);
+    if (callback) {
+      callback(options);
+    }
   }); 
 }
 
