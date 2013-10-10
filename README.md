@@ -3,6 +3,9 @@ Website Monitor
 
 Lightweight Node.js command line tool for website monitoring.
 
+
+[![Build Status](https://travis-ci.org/nyjt/website-monitor.png)](https://travis-ci.org/nyjt/website-monitor)
+
 ### How to install it
 
 ```bash
