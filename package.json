@@ -1,0 +1,34 @@
+{
+  "name": "website-monitor",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jozsef Nyitrai",
+    "email": "nyitrai.jozsef@gmail.com>"
+  },
+  "tags": [
+    "http",
+    "website",
+    "monitor",
+    "monitoring",
+    "test",
+    "status"
+  ]
+  "description": "Lightweight module for website status monitoring.",
+  "main": index.js,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nyjt/website-monitor"
+  },
+  "bugs": {
+    "url": "https://github.com/nyjt/website-monitor/issues"
+  },
+  "dependencies": {
+    "request": ">=2.27.0" 
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+  "scipts": {
+    "test": "node test.js"
+  } 
+}
