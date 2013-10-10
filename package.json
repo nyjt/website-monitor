@@ -12,7 +12,7 @@
     "monitoring",
     "test",
     "status"
-  ]
+  ],
   "description": "Lightweight module for website status monitoring.",
   "main": index.js,
   "repository": {
@@ -27,7 +27,7 @@
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
   "scipts": {
     "test": "node test.js"
   } 
