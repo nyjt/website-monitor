@@ -5,6 +5,9 @@
     "name": "Jozsef Nyitrai",
     "email": "nyitrai.jozsef@gmail.com>"
   },
+  "dependencies": {
+    "request": ">=2.27.0" 
+  },
   "tags": [
     "http",
     "website",
@@ -14,16 +17,13 @@
     "status"
   ],
   "description": "Lightweight module for website status monitoring.",
-  "main": index.js,
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nyjt/website-monitor"
   },
   "bugs": {
     "url": "https://github.com/nyjt/website-monitor/issues"
-  },
-  "dependencies": {
-    "request": ">=2.27.0" 
   },
   "engines": {
     "node": ">=0.8.0"
@@ -32,3 +32,4 @@
     "test": "node test.js"
   } 
 }
+
