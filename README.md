@@ -14,8 +14,22 @@ npm install website-monitor
 
 ### How to use it
 
+Use log method to check http status of websites.
+
+You can pass one URL as string:
 ```js
 var monitor = require('website-monitor');
 
 monitor.log('http://google.com');
 ```
+
+Or more as array:
+
+```js
+var monitor = require('website-monitor');
+
+monitor.log(['http://google.com/', 'http://yahoo.com/', 'http://flickr.com/', 'http://resize-links.com/']);
+```
+
+Check the ./examples/ directory for more example.
+
