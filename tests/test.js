@@ -25,7 +25,10 @@ function success_status_test() {
     assert.equal(status_result.code, 200, 'http status code should be 200');
     exec('node tests/success_log_test.js', function(error, stdout, stderr) {
       assert.equal(stdout, "SUCCESS 200 http://localhost:40444/\n");
-      success_server.close();   
+      exec('node tests/success_log_more_url_test.js', function(error2, stdout2, stderr2) {
+        assert.equal(stdout2, "SUCCESS 200 http://localhost:40444/\nSUCCESS 200 http://localhost:40444/\n");
+        success_server.close();
+      });
     });
   });
 }
@@ -40,8 +43,11 @@ function error_status_test() {
     assert.equal(status_result.code, 400, 'http status code should be 400');
     exec('node tests/error_log_test.js', function(error, stdout, stderr) {
       assert.equal(stdout, "ERROR   400 http://localhost:50555/\n");
-      error_server.close();
-    });  
+      exec('node tests/error_log_more_url_test.js', function(error2, stdout2, stderr2) {
+        assert.equal(stdout2, "ERROR   400 http://localhost:50555/\nERROR   400 http://localhost:50555/\n");
+        error_server.close();
+      });
+    });
   });
 }
 
