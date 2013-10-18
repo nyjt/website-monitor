@@ -28,8 +28,16 @@ Or more as array:
 ```js
 var monitor = require('website-monitor');
 
-monitor.log(['http://google.com/', 'http://yahoo.com/', 'http://flickr.com/', 'http://resize-links.com/']);
+var urls = [
+  'http://google.com',
+  'http://yahoo.com',
+  'http://flickr.com',
+  'http://resize-links.com'
+];
+
+monitor.log(urls);
 ```
 
 Check the ./examples/ directory for more example.
+
 

@@ -1,4 +1,5 @@
 var test = require('../index').test
+var html = require('../html').html
 var http = require('http');
 var assert = require('assert');
 var exec = require('child_process').exec;
