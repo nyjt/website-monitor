@@ -4,6 +4,7 @@ function status_test(url, callback) {
   request(url, function(error, response, body) {
     var message = 'SUCCESS';
     var code = 0;
+    var url_without_passwd = url.replace(/(https?:\/\/)(.*:.*@)?(.*)/, '$1$3');
 
     if (error || response.statusCode >= 400) {
       message = 'ERROR';
@@ -18,7 +19,7 @@ function status_test(url, callback) {
       "error": (message == 'ERROR'),
       "message": message,
       "error_message": error,
-      "url": url,
+      "url": url_without_passwd,
       "code": code
     });
   });

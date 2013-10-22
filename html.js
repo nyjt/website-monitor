@@ -3,10 +3,13 @@ var test = monitor.test
 var call_callback = monitor.call_callback
 
 exports.html_title = 'Website Monitor'
-var html_header = '<html><head><title>Site</title>';
-//html_header += '<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>';
+var html_header = '<html><head><title>Website Monitor</title>';
 html_header += '<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">';
-html_header += '<body><h1>Status</h1><table class="table"><thead class="header"><th>URL</th><th>Code</th><th>Status</th></thead><tbody>';
+d = new Date();
+html_header += '<body><h1>Status</h1>';
+html_header += '<div class="text-muted">' + d.toLocaleDateString() + ' ' + d.toLocaleTimeString() + '</div>';
+
+html_header += '<table class="table"><thead class="header"><th>URL</th><th>Code</th><th>Status</th></thead><tbody>';
 exports.html_header = html_header;
 exports.html_footer = "</tbody></body></html>";
 
