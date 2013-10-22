@@ -49,7 +49,7 @@ SUCCESS 200 http://resize-links.com
 SUCCESS 200 http://google.com
 SUCCESS 200 http://yahoo.com
 SUCCESS 200 http://flickr.com
-ERROR   404 http://this-will-drop-an-error-status.com
+ERROR   404 http://www.google.com/not-found
 ```
 
 Check the ./examples/ directory for more example.
