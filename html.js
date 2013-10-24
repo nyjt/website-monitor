@@ -4,6 +4,7 @@ var call_callback = monitor.call_callback
 
 exports.html_title = 'Website Monitor'
 var html_header = '<html><head><title>Website Monitor</title>';
+var html_header = '<meta http-equiv="refresh" content="60">';
 html_header += '<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">';
 d = new Date();
 html_header += '<body><h1>Status</h1>';
