@@ -6,16 +6,18 @@ Lightweight Node.js command line tool for website monitoring.
 
 [![Build Status](https://travis-ci.org/nyjt/website-monitor.png)](https://travis-ci.org/nyjt/website-monitor)
 
-### How to install it
+[![Code Climate](https://codeclimate.com/github/nyjt/website-monitor.png)](https://codeclimate.com/github/nyjt/website-monitor)
+
+## How to install it
 
 ```bash
 npm install website-monitor
 ```
 
-### How to use it
+## How to use it
 
 
-#### Plain text output
+### Plain text output
 
 Use log method to check http status of websites.
 
@@ -57,7 +59,7 @@ Check the ./examples/ directory for more example.
 The typical usage of log method when you call it from a bash script and grep for ERROR word,
 after it you can do some more action ex. start the webserver if stoped or send email alert.
 
-#### HTML output
+### HTML output
 
 From the 1.2.0 version website monitor can produce html output.
 The typical use case of this feature is the redirection the HTML output in .html file using cronjob as often as you want.
@@ -91,7 +93,7 @@ node website_status_html_generator.js
 Or you can run it from crontab every 5 minutes and it regenerates the status HTML file:
 
 ```
-*/5 * * * * node /home/myuser/website-monitor-scripts/website_status_html_generator.js > /var/www/status.example.com/index.html
+*/5 * * * * node /home/myuser/website-monitor-scripts/website_status_html_generator.js >/var/www/status.example.com/index.html
 ```
 
 Of course you need to change the path.
