@@ -58,8 +58,8 @@ function text_output(http_status, callback) {
   call_callback(http_status, callback);
 }
 
-exports.test = test
+exports.test = test;
 exports.log = function(url, callback) {
   test(url, function(http_status) { text_output(http_status, callback); });
-}
+};
 
